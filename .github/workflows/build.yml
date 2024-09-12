@@ -2,16 +2,26 @@ name: "Rust Build"
 
 on:
   push:
+  pull_request:
+
 jobs:
-  build:
-    name: "Rust build"
-    runs-on: ubuntu-latest
+  rust-build:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+
       - uses: actions-rs/toolchain@v1
         with:
+          profile: minimal
+          override: true
           toolchain: nightly
-      - uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --release --all-features
+          components: rustfmt, clippy
+
+      - name: Cache dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Check format
+        run: cargo fmt -- --check
+
+      - name: Build
+        run: cargo build --locked --verbose
