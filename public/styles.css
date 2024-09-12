@@ -1,0 +1,63 @@
+/* --------------------- Open Props --------------------------- */
+
+/* the props */
+@import "https://unpkg.com/open-props";
+
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
+/* ------------------------------------------------------------ */
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  padding: 1rem;
+}
+
+svg {
+  margin: var(--size-4);
+  fill: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  background-color: var(--gray-9);
+  width: 100vw;
+}
+
+.project {
+  display: flex;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--gray-8);
+  flex-direction: column;
+  text-align: left;
+}
