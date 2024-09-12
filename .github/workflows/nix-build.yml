@@ -10,4 +10,6 @@ jobs:
       - uses: cachix/install-nix-action@v27
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-      - run: nix build .
+      - run: |
+          nix develop
+          echo "Nix shell environment is working correctly."

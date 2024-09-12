@@ -1,12 +1,10 @@
-name: Build
+name: "Rust Build"
 
-on: [push]
-
-name: CI
-
+on:
+  push:
 jobs:
   build:
-    name: Rust build
+    name: "Rust build"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
