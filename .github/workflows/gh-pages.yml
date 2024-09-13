@@ -27,7 +27,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install trunk
-        run: cargo binstall trunk
+        run: cargo install trunk
 
         # build
       - name: Build
