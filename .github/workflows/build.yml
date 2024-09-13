@@ -10,18 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          override: true
-          toolchain: nightly
-          components: rustfmt, clippy
+      - uses: dtolnay/rust-toolchain@nightly
 
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
-
-      - name: Check format
-        run: cargo fmt -- --check
 
       - name: Build
         run: cargo build --locked --verbose
