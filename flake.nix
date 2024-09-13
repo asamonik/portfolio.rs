@@ -1,5 +1,5 @@
 {
-  description = "Rust devshell for xLyrics";
+  description = "portfolio.rs nix shell";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";

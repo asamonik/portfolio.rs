@@ -1,14 +1,14 @@
-name: Lint
+name: "Lint Code"
 
 on:
   push:
 jobs:
   lint:
-    name: Lint
+    name: "Lint Cod"
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Lint code base
@@ -17,7 +17,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCKERFILE_HADOLINT_FILE_NAME: .hadolint.yaml
           VALIDATE_BASH: true
           VALIDATE_DOCKERFILE_HADOLINT: true
           VALIDATE_GITHUB_ACTIONS: true
