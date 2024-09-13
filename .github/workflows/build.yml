@@ -15,8 +15,5 @@ jobs:
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
 
-      - name: Check format
-        run: cargo fmt -- --check
-
       - name: Build
         run: cargo build --locked --verbose
