@@ -1,1 +1,2 @@
-pub mod projects;
+pub mod github_projects;
+pub mod navbar;

@@ -218,7 +218,7 @@ async fn get_repos() -> Result<Projects, Box<dyn std::error::Error>> {
 }
 
 #[component]
-pub fn Projects() -> impl IntoView {
+pub fn GithubProjects() -> impl IntoView {
     let once = create_resource(|| (), |_| async move { get_repos().await.ok() });
 
     view! {

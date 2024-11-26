@@ -1,17 +1,12 @@
-/* --------------------- Open Props --------------------------- */
-
-/* the props */
-@import "https://unpkg.com/open-props";
-
-/* optional imports that use the props */
-@import "https://unpkg.com/open-props/normalize.min.css";
-@import "https://unpkg.com/open-props/buttons.min.css";
-
-/* ------------------------------------------------------------ */
+html {
+  background-color: black;
+  color: white;
+  margin: 7rem;
+  font-size: x-large;
+}
 
 body {
   font-family: sans-serif;
-  text-align: center;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -20,34 +15,31 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-align: center;
-  padding: 1rem;
 }
 
 svg {
-  margin: var(--size-4);
-  fill: white;
+  padding: 0.2rem;
+  height: 1rem;
+  fill: gray;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding-top: 10px;
+  background-color: var(--gray-9);
+  width: 100vw;
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  padding: 10px;
+  padding-bottom: 10px;
   background-color: var(--gray-9);
   width: 100vw;
 }
@@ -59,5 +51,14 @@ footer {
   margin: 10px;
   background-color: var(--gray-8);
   flex-direction: column;
-  text-align: left;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
 }

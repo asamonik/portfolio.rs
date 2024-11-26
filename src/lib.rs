@@ -6,6 +6,9 @@ mod components;
 mod pages;
 
 use crate::pages::home::Home;
+use crate::pages::projects::Projects;
+use crate::pages::blog::Blog;
+use crate::pages::work::Work;
 use crate::pages::not_found::NotFound;
 
 #[component]
@@ -23,6 +26,9 @@ pub fn App() -> impl IntoView {
       <Router>
         <Routes>
           <Route path="/" view=Home/>
+          <Route path="/work" view=Work/>
+          <Route path="/projects" view=Projects/>
+          <Route path="/blog" view=Blog/>
           <Route path="/*" view=NotFound/>
         </Routes>
       </Router>
