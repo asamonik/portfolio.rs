@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["asamonik"]
 
 [dependencies]
-leptos = { version = "0.6", features = ["csr"] }
+leptos = { version = "0.7", features = ["csr"] }
 leptos_meta = { version = "0.6", features = ["csr"] }
 leptos_router = { version = "0.6", features = ["csr"] }
 console_log = "1"
