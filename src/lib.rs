@@ -1,36 +1,29 @@
-use leptos::*;
-use leptos_meta::*;
-use leptos_router::*;
+use cfg_if::cfg_if;
 
-mod components;
-mod pages;
+pub mod api;
+pub mod app;
+pub mod components;
+pub mod pages;
 
-use crate::pages::home::Home;
-use crate::pages::projects::Projects;
-use crate::pages::blog::Blog;
-use crate::pages::work::Work;
-use crate::pages::not_found::NotFound;
+#[cfg(feature = "ssr")]
+pub mod fileserve;
 
-#[component]
-pub fn App() -> impl IntoView {
-    provide_meta_context();
+cfg_if! {
+    if #[cfg(feature = "hydrate")] {
+        use wasm_bindgen::prelude::wasm_bindgen;
+        use app::*;
+        use leptos::*;
 
-    view! {
-      <Html lang="en" dir="ltr" attr:data-theme="light"/>
+        #[wasm_bindgen]
+        pub fn hydrate() {
+            //_ = console_log::init_with_level(log::Level::Debug);
+            //console_error_panic_hook::set_once();
 
-      <Title text="asamonik.at"/>
+            log::log!(log::Level::Debug, "hydrate mode - hydrating");
 
-      <Meta charset="UTF-8"/>
-      <Meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-      <Router>
-        <Routes>
-          <Route path="/" view=Home/>
-          <Route path="/work" view=Work/>
-          <Route path="/projects" view=Projects/>
-          <Route path="/blog" view=Blog/>
-          <Route path="/*" view=NotFound/>
-        </Routes>
-      </Router>
+            leptos::mount_to_body(|| {
+                view! { <App/> }
+            });
+        }
     }
 }

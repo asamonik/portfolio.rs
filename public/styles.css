@@ -1,64 +1,115 @@
-html {
-  background-color: black;
-  color: white;
-  margin: 7rem;
-  font-size: x-large;
+/* Base styles for mobile devices */
+html, body {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
-  font-family: sans-serif;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.section {
-  display: flex;
-  flex-direction: row;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 svg {
-  padding: 0.2rem;
-  height: 1rem;
-  fill: gray;
+    float: right;
+    display:flex;
+    margin-left: auto;
+    height: 1.7rem;
+    fill: gray;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  padding-top: 10px;
-  background-color: var(--gray-9);
-  width: 100vw;
+    top: 0;
+    width: 100%;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: right; /* Optional: to vertically center the items */
+}
+
+header > *:not(svg) {
+    margin-right: auto;
+}
+
+span {
+    width: fit-content;
+    display: flex;
+}
+
+header a {
+    margin-right: 0.5rem;
+}
+
+.main {
+    text-align: left;
+    max-width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Optional: to ensure it takes the full width */
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  padding-bottom: 10px;
-  background-color: var(--gray-9);
-  width: 100vw;
-}
-
-.project {
-  display: flex;
-  border-radius: 1rem;
-  padding: 10px;
-  margin: 10px;
-  background-color: var(--gray-8);
-  flex-direction: column;
+    position: absolute;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    text-align: left;
 }
 
 a {
-  color: gray;
-  text-decoration: none;
-  display: block;
+    color: gray;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+th, td {
+    color: gray;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+input {
+    background: transparent;
+    float: right;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 600px) {
+    html {
+        font-size: 1rem;
+        margin: 2rem;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .project {
+        flex-direction: row;
+    }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 1024px) {
+    html {
+        margin-left: 10vw;
+    }
+
+    .project {
+        flex-direction: row;
+    }
 }

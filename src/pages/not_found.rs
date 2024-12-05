@@ -1,4 +1,5 @@
 use leptos::*;
+use leptos::prelude::ElementChild;
 
 #[component]
 pub fn NotFound() -> impl IntoView {

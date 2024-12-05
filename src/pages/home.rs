@@ -1,5 +1,6 @@
-use leptos::*;
 use crate::components::navbar::Navbar;
+use leptos::prelude::*;
+use leptos::error::ErrorBoundary;
 
 #[component]
 pub fn Home() -> impl IntoView {
@@ -22,29 +23,32 @@ pub fn Home() -> impl IntoView {
           }
       }>
 
-        <div class="container">
-        <Navbar/>
-
-          hi, 
-          <p/>
-          i am andreas, a software engineer from austria. 
-          <p/>
+        <div class="main">
+          hi,
+          <p />
+          i am andreas
+          <p />
           i am studying cs in graz. i like low level programming, infrastructure and security
-          <p/>
+          <p />
 
-          you can check out my <a href="/blog"># blog</a>, <a href="/projects"># projects</a> and <a href="/work"># work experience</a>
+          /*
+          you can check out my
+          <a href="/blog"># blog</a>
+           */
 
-          <p/>
+          <p />
           and i use nixos, btw
-          <p/>
-          maybe also mail me: <span>mail at asamonik dot at</span>
+          <p />
+          /*
+          maybe also mail me:
+          <span class="gray">mail at asamonik dot at</span>
 
-          <p/>
+          <p />
           gpg key: 0x1234
-
+           */
 
           <footer>
-             <a href="https://leptos.dev/"># source</a>
+            <a href="https://github.com/asamonik/portfolio.rs/"># source</a>
           </footer>
         </div>
 
