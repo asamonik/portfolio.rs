@@ -22,12 +22,13 @@ svg {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     width: 100%;
     max-width: 80vw;
-    display: flex;
     flex-direction: row;
-    align-items: right; /* Optional: to vertically center the items */
 }
 
 header > *:not(svg) {
@@ -40,6 +41,14 @@ span {
 }
 
 header a {
+    margin-right: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links span {
     margin-right: 0.5rem;
 }
 
@@ -76,12 +85,6 @@ th, td {
     padding-right: 1rem;
 }
 
-input {
-    background: transparent;
-    float: right;
-    color: white;
-}
-
 ::placeholder {
     color: white;
 }
@@ -112,4 +115,13 @@ input {
     .project {
         flex-direction: row;
     }
+}
+
+.blog-post {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    font-size: 1rem;
+    text-align: left;
+    max-width: 80vw;
+    width: 100%; /* Optional: to ensure it takes the full width */
 }

@@ -1,6 +1,6 @@
 ---
 title: Test post
-date: 2024-06-19
+date: 1970-01-01
 tags:
   - Rust
   - Leptos

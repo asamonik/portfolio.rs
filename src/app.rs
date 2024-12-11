@@ -37,9 +37,6 @@ pub fn App() -> impl IntoView {
                 <Route path=path!("/blog") view=move || view!{
                   <Blog/>
                 } />
-                <Route path=path!("/projects") view=move || view!{
-                  <Projects/>
-                } />
 
                 // post route
                 <ParentRoute path=path!("/post/:id") view=move || {

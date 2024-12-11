@@ -1,17 +1,16 @@
 use crate::api::posts::get_all_posts;
-use leptos::prelude::*;
 use leptos::error::ErrorBoundary;
+use leptos::html::search;
+use leptos::prelude::*;
 
 #[component]
 pub fn Blog() -> impl IntoView {
     let posts = Resource::new(
-      move || (),
-      move |_| async move {
-          get_all_posts("".to_string()).await
-      },
-  );
+        move || (),
+        move |_| async move { get_all_posts("".to_string()).await },
+    );
 
-    let (search_input, set_search_input) = signal(String::new());
+    let (search_input, set_search_input) = signal("".to_string());
 
     view! {
       <ErrorBoundary fallback=|errors| {
@@ -30,13 +29,19 @@ pub fn Blog() -> impl IntoView {
           }
       }>
         <div class="main">
-          <span>"recent posts"</span>
+          <span>"recent posts " {search_input.get()}</span>
+          /*
           <input
             type="text"
             value={search_input().clone()}
-            on:input=move |e| set_search_input(event_target_value(&e))
+            on:change=move |ev| {
+              println!("search_input: {:?}", ev.target());
+                set_search_input.set("sdafasdf".to_string());
+            }
+            prop:value=search_input
           />
-          <hr />
+           */
+          <hr/>
 
           <table>
             <thead>

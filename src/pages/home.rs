@@ -31,10 +31,8 @@ pub fn Home() -> impl IntoView {
           i am studying cs in graz. i like low level programming, infrastructure and security
           <p />
 
-          /*
           you can check out my
           <a href="/blog"># blog</a>
-           */
 
           <p />
           and i use nixos, btw
