@@ -15,7 +15,7 @@ jobs:
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
 
-      - name: Build
+      - name: Install Cargo leptos
         run: cargo install cargo-leptos
       - name: Build
         run: cargo leptos build
