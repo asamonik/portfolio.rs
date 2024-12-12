@@ -39,7 +39,7 @@ phosphor-leptos = "0.6.0"
 web-sys = { version = "0.3.60", features = ["Window", "Location", "Screen", "Document", "Element", "HtmlTextAreaElement", "CssStyleDeclaration"] }
 anyhow = "1.0.80"
 gray_matter = "0.2.6"
-pulldown-cmark = "0.9"
+pulldown-cmark = "0.12"
 chrono = { version = "0.4.24", features = ["serde"] }
 gloo-net = "0.6"
 serde_yaml = "0.8"
