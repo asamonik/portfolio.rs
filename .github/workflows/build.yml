@@ -15,5 +15,11 @@ jobs:
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
 
+      - name: Install wasm32 target
+        run: rustup target add wasm32-unknown-unknown
+
+      - name: Install Cargo leptos
+        run: cargo install cargo-leptos
+
       - name: Build
-        run: cargo build --locked --verbose
+        run: cargo leptos build

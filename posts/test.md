@@ -9,6 +9,6 @@ draft: true
 summary: Test frontmatter
 ---
 
-# Test Post
+## Test Post
 
 This is the first test post!
