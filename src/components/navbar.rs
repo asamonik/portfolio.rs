@@ -9,9 +9,6 @@ pub fn Navbar() -> impl IntoView {
           <span>
             <a href="/"># home </a>
           </span>
-          <span>
-            <a href="/blog"># blog </a>
-          </span>
         </div>
         <a href="https://github.com/asamonik">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

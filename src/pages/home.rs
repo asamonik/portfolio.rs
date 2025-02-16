@@ -31,19 +31,19 @@ pub fn Home() -> impl IntoView {
           i am studying cs in graz. i like low level programming, infrastructure and security
           <p />
 
+          /*
           you can check out my
           <a href="/blog"># blog</a>
+          */
 
           <p />
           and i use nixos, btw
           <p />
-          /*
-          maybe also mail me:
-          <span class="gray">mail at asamonik dot at</span>
-
+          maybe also mail me: mail 𝒂𝒕 asamonik ꓒσ𝗍 at
           <p />
-          gpg key: 0x1234
-           */
+          <p />
+          gpg fingerprint: 5368 486D 270C 6698 B868  C881 5208 A1A6 76BE 91A0
+          <p />
 
           <footer>
             <a href="https://github.com/asamonik/portfolio.rs/"># source</a>

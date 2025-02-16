@@ -28,14 +28,14 @@
         };
         cargo-leptos = rustPlatform.buildRustPackage rec {
           pname = "cargo-leptos";
-          version = "v0.2.22";
+          version = "v0.2.28";
           src = pkgs.fetchFromGitHub {
             owner = "leptos-rs";
             repo = pname;
             rev = version;
             hash = "sha256-QPCYKlbPHuSBmwfkKdYhcVF81Lnirf65IYao7UVxz9Q=";
           };
-          cargoHash = "sha256-SiMOIZ4rt1Vg59cDiGwoovmY8dCuYXGoviHQfLoyk28=";
+          cargoHash = "sha256-2JT3PbJU+ZBUAgNgQECRY2CPu29l34bXLa47zQ9etes=";
           doCheck = false;
         };
       in
@@ -56,9 +56,6 @@
               darwin.apple_sdk.frameworks.SystemConfiguration
             ];
 
-          shellHook = ''
-            $SHELL
-          '';
         };
       }
     );
