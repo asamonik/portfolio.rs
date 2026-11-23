@@ -1653,7 +1653,7 @@ dependencies = [
  "serde_json",
  "serde_yaml",
  "simple_logger",
- "thiserror 1.0.69",
+ "thiserror 2.0.4",
  "tokio",
  "tokio-stream",
  "tower",
